@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    android:orientation="vertical" 
+    android:id="@+id/loginpage"
+    android:background="@drawable/login_bg" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+   <!-- 
+        android:background="@drawable/login_pic2"
+    <ImageView android:id="@+id/image" 
+        android:layout_width="wrap_content" 
+        android:layout_height="90dip" 
+        android:layout_marginLeft="28.0dip" 
+        android:layout_marginTop="46.0dip" 
+        android:layout_marginRight="28.0dip" />  -->
+        
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    	<LinearLayout
+        	android:layout_width="fill_parent" 
+        	android:layout_height="wrap_content" 
+    	android:orientation="vertical" >
+    <TextView
+        android:id="@+id/image"
+        android:layout_width="fill_parent"
+        android:layout_height="140dip"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="52dip"
+        android:gravity="center"
+        android:text="群通告"
+        android:textColor="#ffffff"
+        android:textSize="40dp" />
+    <LinearLayout 
+        android:orientation="vertical" 
+        android:id="@+id/input" 
+        android:background="@drawable/login_input" 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:layout_marginLeft="28.0dip" 
+        android:layout_marginRight="28.0dip" 
+        android:layout_below="@id/image">  
+
+        <EditText
+            android:id="@+id/loginUser"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:background="#00ffffff"
+            android:hint="请输入手机号"
+            android:maxLength="16"
+            android:maxLines="1"
+            android:paddingLeft="12.0dip"
+            android:textColor="#ff1d1d1d"
+            android:textColorHint="#ff666666"
+            android:textSize="16.0sp" />
+
+        <View android:background="#ffc0c3c4" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="1.0px" 
+            android:layout_marginRight="1.0px" />
+        <EditText android:textSize="16.0sp" android:textColor="#ff1d1d1d" android:textColorHint="#ff666666" android:gravity="center_vertical" 
+            android:id="@+id/loginPswd" android:background="#00ffffff" android:paddingLeft="12.0dip" android:layout_width="fill_parent" 
+            android:layout_height="44.0dip" android:hint="请输入密码" android:maxLines="1" android:maxLength="16" android:inputType="textPassword" />
+    </LinearLayout>
+    
+
+    <Button 
+        android:textSize="18.0sp" 
+        android:textColor="#ff333333" 
+        android:gravity="center" 
+        android:id="@+id/login" 
+        android:background="@drawable/login_button" 
+        android:paddingTop="5.0dip" 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginLeft="28.0dip" 
+        android:layout_marginTop="12.0dip" 
+        android:layout_marginRight="28.0dip" 
+        android:text="登陆"    
+        android:layout_below="@id/input" />
+
+
+    <RelativeLayout 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:layout_marginLeft="30.0dip"
+        android:layout_marginTop="18.0dip" 
+        android:layout_marginRight="30.0dip" 
+        android:layout_below="@id/login"
+        android:layout_weight="1" >
+		<Button  android:textSize="12.0sp" android:textColor="#ffffffff" android:layout_alignParentRight="true" android:gravity="left|center"  
+		    android:id="@+id/regist" android:background="@drawable/login_register" android:paddingLeft="8.0dip" android:paddingRight="18.0dip" 
+		    android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="注册账号" />
+    </RelativeLayout>
+    
+    <!-- <CheckBox android:textSize="12.0sp" android:textColor="#ffffffff" android:layout_alignParentLeft="true"  android:id="@+id/auto_save_password" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:button="@null" android:text="@string/auto_save_password" android:drawableLeft="@drawable/checkbox_bg1" android:drawablePadding="4.0dip"/>
+		
+    <LinearLayout 
+        android:orientation="vertical" 
+        android:id="@+id/menu" 
+        android:background="@drawable/login_moremenu_back" 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:layout_alignParentBottom="true">
+        
+        <RelativeLayout 
+            android:id="@+id/more" 
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content"
+            android:paddingTop="8.0dip"
+            android:paddingBottom="8.0dip"
+            android:clickable="true">
+            <TextView android:textSize="14.0sp" android:textColor="#ffc6e6f9" android:gravity="center" android:id="@+id/more_text" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/more_login_setting" android:maxLines="1" android:layout_centerInParent="true" />
+            <ImageView android:id="@+id/more_image" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/login_more_up" android:layout_toLeftOf="@+id/more_text" android:layout_marginRight="5.0dip" android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+
+        <LinearLayout 
+            android:orientation="vertical" 
+            android:id="@+id/moremenu" 
+            android:visibility="gone" 
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content">
+            
+               <View android:background="#ff005484" android:layout_width="fill_parent" android:layout_height="1.0px" />
+               <View android:background="#ff0883cb" android:layout_width="fill_parent" android:layout_height="1.0px" />
+               
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="30.0dip">
+                <CheckBox android:textSize="12.0sp" android:textColor="#ffc6e6f9" android:id="@+id/hide_login" android:background="@null" android:layout_width="1.0px" android:layout_height="wrap_content" android:checked="false" android:button="@null" android:text="@string/hide_login" android:drawableLeft="@drawable/checkbox_bg1" android:drawablePadding="4.0dip" android:layout_weight="2.0" />
+                <CheckBox android:textSize="12.0sp" android:textColor="#ffc6e6f9" android:id="@+id/silence_login" android:background="@null" android:layout_width="1.0px" android:layout_height="wrap_content" android:checked="false" android:button="@null" android:text="@string/silence_login" android:drawableLeft="@drawable/checkbox_bg1" android:drawablePadding="4.0dip" android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginTop="18.0dip" android:layout_marginRight="30.0dip" android:layout_marginBottom="18.0dip">
+                <CheckBox android:textSize="12.0sp" android:textColor="#ffc6e6f9" android:id="@+id/accept_accounts" android:background="@null" android:layout_width="1.0px" android:layout_height="wrap_content" android:checked="true" android:button="@null" android:text="@string/info_accounts" android:singleLine="true" android:drawableLeft="@drawable/checkbox_bg1" android:drawablePadding="4.0dip" android:layout_weight="2.0" />
+                <CheckBox android:textSize="12.0sp" android:textColor="#ffc6e6f9" android:id="@+id/accept_troopmsg" android:background="@null" android:layout_width="1.0px" android:layout_height="wrap_content" android:checked="true" android:button="@null" android:text="@string/info_troopmessage" android:drawableLeft="@drawable/checkbox_bg1" android:drawablePadding="4.0dip" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+        
+    </LinearLayout>
+ -->
+    	</LinearLayout>
+    </ScrollView>
+    
+    
+</RelativeLayout>
